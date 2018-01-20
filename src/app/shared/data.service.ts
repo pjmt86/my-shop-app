@@ -30,4 +30,8 @@ export class DataService {
   addItem(item: Item): void {
     this.items.push(item);
   }
+
+  reverseList(): void {
+    this.items.reverse();
+  }
 }

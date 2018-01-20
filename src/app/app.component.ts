@@ -16,8 +16,8 @@ export class AppComponent {
     this.items = _dataService.getItems();
   }
 
-  changeList(num: number) {
-
+  changeList() {
+    this._dataService.reverseList();
   }
 
 }

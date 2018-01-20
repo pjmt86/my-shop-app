@@ -10,10 +10,7 @@ export class ListComponent {
   @Input() itemList: Array<Item>;
   @Output() changeList: EventEmitter<number> = new EventEmitter<number>();
 
-  public page: number = 0;
-
   emitEvent() {
-    this.changeList.emit(this.page);
-    this.page++;
+    this.changeList.emit();
   }
 }
