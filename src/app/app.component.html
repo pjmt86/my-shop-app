@@ -1,3 +1,5 @@
 <app-header></app-header>
 
+<button (click)="loadData()">Carga la lista</button>
+
 <app-list [itemList]="items" (changeList)="changeList($event)"></app-list>

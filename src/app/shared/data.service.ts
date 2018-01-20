@@ -5,6 +5,9 @@ import {Item} from './list/list.model';
 export class DataService {
 
   private items: Array<Item> = [
+  ];
+
+  private defaultItems: Array<Item> = [
     {
       id: 1,
       description: 'Pantalon'
@@ -29,6 +32,10 @@ export class DataService {
 
   addItem(item: Item): void {
     this.items.push(item);
+  }
+
+  loadDefaultList(): void {
+    this.items = this.defaultItems;
   }
 
   reverseList(): void {
