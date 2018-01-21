@@ -1,5 +1,5 @@
 <ul>
-    <li [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{item.id + "-" + item.description}}</li>
+    <li [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{ item.id | product:item.description}}</li>
 </ul>
 
 <button (click)="emitEvent()">Cambia la lista</button>
