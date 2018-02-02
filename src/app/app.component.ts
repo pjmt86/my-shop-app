@@ -11,13 +11,11 @@ import { DataService } from './shared/data.service';
 export class AppComponent {
 
   public items: Array<Item>;
+  private title = 'Pepito';
 
-  constructor(private _dataService: DataService) {
-    this.items = _dataService.getItems();
-  }
+  constructor(private _dataService: DataService) {}
 
   loadData() {
-    this._dataService.loadDefaultList();
     this.items = this._dataService.getItems();
   }
 
