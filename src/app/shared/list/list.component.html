@@ -1,5 +1,10 @@
-<ul>
-    <li [attr.id]="i" class="" *ngFor="let item of itemList; let i = index">{{ item.id | product:item.description}}</li>
-</ul>
 
-<button (click)="emitEvent()">Cambia la lista</button>
+<table style="border: 1px solid black; width:100%">
+  <tr>
+    <th (click)="emitEvent('Product')">Product</th>
+  </tr>
+  <tr *ngFor="let item of itemList; let i = index">
+    <td>{{ item.id | product:item.description}}</td>
+  </tr>
+</table>
+
